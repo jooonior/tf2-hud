@@ -1,0 +1,16 @@
+Novecento Wide Bold (Novecento Wide Bold.otf)
+	Font made from oNline Web Font (http://www.onlinewebfonts.com) is licensed by CC BY 3.0
+	https://www.onlinewebfonts.com/download/67821e7ef9a2952d6e7757a6cae5a826
+
+Renogare (Renogare.otf)
+	https://www.dafont.com/renogare.font
+
+Hud Icons (HudIcons.otf)
+	original by Hypnotize (https://github.com/Hypnootize)
+	edited by me
+
+TF2 Class Icons (TF2 Class Icons.otf)
+	https://github.com/Hypnootize
+
+Blank (Blank.otf)
+	made by me

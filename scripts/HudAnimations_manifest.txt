@@ -1,0 +1,10 @@
+// Hud animation files
+// Priority top (highest) to bottom (lowest)
+
+hudanimations_manifest
+{
+	"file" "scripts/hudanimations.txt"				// hl2 (engine) animations
+	"file" "scripts/hudanimations_UI.txt"			// game menu UI animations
+	"file" "scripts/hudanimations_HUD.txt"			// in-game HUD animations
+	"file" "scripts/hudanimations_tf.txt"			// other tf2 animations
+}

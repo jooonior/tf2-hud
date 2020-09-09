@@ -1,0 +1,63 @@
+USEFUL LINKS
+
+Basics
+	http://doodlesstuff.com/?p=tf2hud
+	https://github.com/JarateKing/TF2-Hud-Reference
+Valve Dev Wiki - a lot of things are missing
+	https://developer.valvesoftware.com/wiki/Understanding_VGUI2_Resource_Files
+	https://developer.valvesoftware.com/wiki/Category:VGUI
+A game that also uses VGUI2 - a lot more documentation but some things don't apply
+	https://wiki.empiresmod.com/VGUI
+
+
+WHAT I'VE FOUND
+
+actionSignalLevel
+	https://github.com/ValveSoftware/source-sdk-2013/blob/master/mp/src/vgui2/vgui_controls/Panel.cpp
+	idk
+	
+pinCorner
+	Valve Dev Wiki says:
+		The pinned corner is the one positioned at xpos/ypos.
+		Values are: TOPLEFT (default), TOPRIGHT, BOTTOMLEFT, BOTTOMRIGHT
+	I can't get it work, numbers nor keywords
+
+use_proportional_insets
+	?
+
+mouseInputEnabled
+	0 (default), 1
+	if element reacts mouse input
+	0 will allow mouse events to pass to panels below
+
+keyboardInputEnabled
+	same as mouse I'd guess?
+
+PaintBackgroundType
+	0 - normal corners
+	1 - top left cloudy
+	2 - round corners
+	3 - left round, alpha gradient l to r
+
+roundedCorners
+	add together:
+		1 top left
+		2 top right
+		4 bottom left
+		8 bottom right
+	works only with specific panels ???
+
+backgroundenabled
+	???
+
+tabPosition
+	should control the order in which panels are seleced when pressing tab
+	I can't get it to work
+	
+selected
+	on buttons
+	selectedBgColor_override
+
+actionSignalLevel
+	https://github.com/ValveSoftware/source-sdk-2013/blob/master/mp/src/vgui2/vgui_controls/Panel.cpp
+	clicks activate parent instead ?

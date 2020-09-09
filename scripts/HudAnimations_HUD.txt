@@ -1,0 +1,121 @@
+// Animations for in-game HUD (Heads Up Disaplay)
+// HP, ammo, etc.
+
+/////////////////////////////////// OVERHEAL ///////////////////////////////////
+
+event HudHealthBonusPulse			// overhealed
+{
+	Animate	"HealthValue"				FgColor	"HpBonusFg"			Linear	0.0	0.075
+	Animate	"HealthValueShadow"			FgColor	"HpBonusBg"			Linear	0.0	0.075
+
+	Animate	"TargetHealthBG"				BgColor	"TargetBg"			Linear	0.0	0.075
+	Animate	"PlayerStatusHealthBonusImage"	Alpha		"170"				Linear	0.0	0.075
+}
+
+event HudHealthBonusPulseStop			// no longer overhealed
+{
+	Animate	"HealthValue"				FgColor	"HpNormalFg"		Linear	0.0	0.075
+	Animate	"HealthValueShadow"			FgColor	"HpNormalFg"		Linear	0.0	0.075
+
+	Animate	"TargetHealthBG"				BgColor	"TargetBg"			Linear	0.0	0.075
+	Animate	"PlayerStatusHealthBonusImage"	Alpha		"0"				Linear	0.0	0.075
+}
+
+
+////////////////////////////////// LOW HEALTH //////////////////////////////////
+
+event HudHealthDyingPulse			// low hp
+{
+	Animate	"HealthValue"				FgColor	"HpLowFg"			Linear	0.0	0.075
+	Animate	"HealthValueShadow"			FgColor	"HpLowBg"			Linear	0.0	0.075
+
+	Animate	"TargetHealthBG"				BgColor	"200  45  45 170"		Linear	0.0	0.075
+}
+
+event HudHealthDyingPulseStop			// no longer low hp
+{
+	Animate	"HealthValue"				FgColor	"HpNormalFg"		Linear	0.0	0.075
+	Animate	"HealthValueShadow"			FgColor	"HpNormalBg"		Linear	0.0	0.075
+
+	Animate	"TargetHealthBG"				BgColor	"TargetBg"			Linear	0.0	0.075
+}
+
+
+/////////////////////////////////// LOW AMMO ///////////////////////////////////
+
+event HudLowAmmoPulse
+{
+	Animate	"AmmoInReserve"				FgColor	"AmmoLowFg"			Linear	0.0	0.075
+	Animate	"AmmoInReserveShadow"			FgColor	"AmmoLowBg"			Linear	0.0	0.075
+
+	Animate	"AmmoNoClip"				FgColor	"AmmoLowFg"			Linear	0.0	0.075
+	Animate	"AmmoNoClipShadow"			FgColor	"AmmoLowBg"			Linear	0.0	0.075
+}
+
+event HudLowAmmoPulseStop
+{
+	Animate	"AmmoInReserve"				FgColor	"AmmoNormalFg"		Linear	0.0	0.075
+	Animate	"AmmoInReserveShadow"			FgColor	"AmmoNormalBg"		Linear	0.0	0.075
+
+	Animate	"AmmoNoClip"				FgColor	"AmmoNormalFg"		Linear	0.0	0.075
+	Animate	"AmmoNoClipShadow"			FgColor	"AmmoNormalBg"		Linear	0.0	0.075
+}
+
+
+///////////////////////////////// SPY DISGUISE /////////////////////////////////
+
+event HudSpyDisguiseChanged
+{
+	Animate	"PlayerStatusSpyOutlineImage"		Alpha		"150"				Linear	0.0	0.05
+	Animate	"PlayerStatusSpyOutlineImage"		Size		"40 5"			Linear	0.0	0.0
+	Animate	"PlayerStatusSpyOutlineImage"		Size		"0 5"				Linear	0.3	0.87
+
+	RunEvent	HudSpyDisguiseHide	1.17
+}
+
+event HudSpyDisguiseHide
+{
+	Animate	"PlayerStatusSpyOutlineImage"		Alpha		"0"				Linear	0.0	0.0
+}
+
+event HudSpyDisguiseFadeIn
+{
+	RunEvent	"HudSpyDisguiseChanged"			0
+	Animate	"PlayerStatusSpyImage"			Alpha		"255"				Linear	0.9	0.1	
+}
+
+event HudSpyDisguiseFadeOut
+{
+	RunEvent	"HudSpyDisguiseChanged"			0
+	Animate	"PlayerStatusSpyImage"			Alpha		"0"				Linear	0.9	0.1
+}
+
+
+
+////////////////////////////////// FULL UBER ///////////////////////////////////
+
+event HudMedicCharged
+{
+	Animate	"ChargeLabel" 				FgColor	"TanLight"			Linear	0.0		0.1
+	Animate	"ChargeLabel" 				FgColor	"TanDarker"			Linear	0.3		0.4
+	
+	Animate	"ChargeMeter" 				FgColor	"TanLight"			Linear	0.0		0.1
+	Animate	"ChargeMeter" 				FgColor	"TanDarker"			Linear	0.3		0.4
+
+	RunEvent	HudMedicChargedLoop	0.6
+}
+
+// call to loop HudHealthBonusPulse
+event HudMedicChargedLoop
+{
+	RunEvent	HudMedicCharged		0.0
+}
+
+event HudMedicChargedStop
+{
+	StopEvent	HudMedicCharged		0.0
+	StopEvent	HudMedicChargedLoop	0.0
+	
+	Animate	"ChargeLabel" 				FgColor	"TanLight"			Linear	0.0		0.0001
+	Animate	"ChargeMeter" 				FgColor	"TanLight"			Linear	0.0		0.0001
+}

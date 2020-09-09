@@ -1,0 +1,25 @@
+// load the base configuration
+//exec default.cfg
+r_decal_cullsize 1
+
+// Setup custom controller
+exec joystick.cfg
+
+// hud cfg for detecting mastercomfig
+exec hudconfig_before_autoexec.txt
+
+// run a user script file if present
+exec autoexec.cfg
+
+// exec hud config
+exec hudconfig_after_autoexec.txt
+
+//
+// stuff command line statements
+//
+stuffcmds
+
+// display the startup level
+startupmenu
+
+sv_unlockedchapters 99

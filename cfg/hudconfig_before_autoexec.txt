@@ -1,0 +1,14 @@
+// Exec'd before autoexec.cfg
+
+// If mastercomfig is installed, it will override this alias
+alias version_comfig alias reload_dashboarddimmer "wait 5; showconsole; wait; incrementvar mat_antialias -100 100 1; hideconsole; wait 5; incrementvar mat_antialias -100 100 -1"
+
+// User can call "keep_dimmer" from autoexec to prevent the DashboardDimmer reload
+alias prevent_reload alias prevent_reload? alias reload_dashboarddimmer
+alias prevent_reload?
+
+// Fixes target ID. User can still override this in autoexec
+tf_hud_target_id_disable_floating_health 1
+
+// Prevent Unknown command "close" console warnings
+alias close

@@ -1,0 +1,10 @@
+main menu
+	=> resource/ui/mainmenuoverride.res
+backpack, loadout, etc.
+	=> resource/ui/charinfopanel.res
+loading screen
+	=> resource/ui/statsummary.res
+team selection
+	=> resource/ui/teammenu.res
+class selection
+	=> resource/ui/classselection.res
