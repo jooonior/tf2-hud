@@ -53,7 +53,7 @@
 
 			font					"Symbols 34"
 			textAlignment			center
-			labeltext				"Ð"
+			labeltext				"A"
 			textInsetX				22				// adjust text postition
 
 			Command				"find_game"

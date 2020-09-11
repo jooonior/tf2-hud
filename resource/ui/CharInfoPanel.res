@@ -261,7 +261,7 @@
 		wide					42
 		tall					o1
 
-		labelText				"ò"
+		labelText				"M"
 		font					"Symbols 32"
 		textAlignment			center
 

@@ -352,7 +352,7 @@
 		tall					o1
 		
 		font					"Symbols 27"
-		labelText				"Ñ"
+		labelText				"N"
 		textAlignment			center
 		
 		Command				"armory"

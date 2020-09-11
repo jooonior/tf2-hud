@@ -182,7 +182,7 @@
 		wide					16
 		tall					o1
 		
-		labelText				"¿"
+		labelText				"B"
 		font					"Symbols 16"
 		textAlignment			center
 		
@@ -286,7 +286,7 @@
 		wide					42
 		tall					o1
 		
-		labelText				"¤"
+		labelText				"C"
 		font					"Symbols 26"
 		textAlignment			center
 		
@@ -746,7 +746,7 @@
 		wide					21
 		tall					o1
 
-		labelText				"à"
+		labelText				"G"
 		font					"Symbols 16"
 		textAlignment			west
 		textInsetX				7
@@ -777,7 +777,7 @@
 		wide					21
 		tall					o1
 
-		labelText				"Ò"
+		labelText				"E"
 		font					"Symbols 16"
 		textAlignment			east
 		textInsetX				3
@@ -808,7 +808,7 @@
 		wide					21
 		tall					o1
 
-		labelText				"Ï"
+		labelText				"D"
 		font					"Symbols 16"
 		textAlignment			west
 		textInsetX				7

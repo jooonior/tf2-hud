@@ -195,7 +195,7 @@
 
 		"12"		// symbols
 		{
-			font		"resource/scheme/fonts/Hud Icons.otf"
+			font		"resource/scheme/fonts/Hud Icons global.otf"
 			name		"HUD Icons"
 		}
 		
