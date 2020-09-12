@@ -1,4 +1,5 @@
 #base "../../resource/tools/ReloadSchemeButton.res"
+#base "ItemSelectionBackground.res"
 
 "Resource/UI/ItemSelectionPanel.res"
 {
@@ -123,12 +124,40 @@
 			ypos						0
 			wide						f0
 			tall						480
-			visible					1
-			image						"replay\thumbnails\backgrounds\split1\full"
 			scaleimage				1
 
 			pin_to_sibling				"Anchor"
 			pin_corner_to_sibling	PIN_CENTER_TOP
+			pin_to_sibling_corner	PIN_TOPLEFT
+		}
+		
+		"Left"		// not perfectly aligned but it might actually look better this way
+		{
+			ControlName				ImagePanel
+			fieldName				"Full"
+			xpos						0
+			ypos						0
+			wide						p0.5
+			tall						480
+			scaleimage				1
+
+			pin_to_sibling				"Anchor"
+			pin_corner_to_sibling	PIN_TOPRIGHT
+			pin_to_sibling_corner	PIN_TOPLEFT
+		}
+		
+		"Right"		// not perfectly aligned but it might actually look better this way
+		{
+			ControlName				ImagePanel
+			fieldName				"Full"
+			xpos						0
+			ypos						0
+			wide						p0.5
+			tall						480
+			scaleimage				1
+
+			pin_to_sibling				"Anchor"
+			pin_corner_to_sibling	PIN_TOPLEFT
 			pin_to_sibling_corner	PIN_TOPLEFT
 		}
 		
