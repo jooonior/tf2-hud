@@ -1,7 +1,7 @@
 // Exec'd before autoexec.cfg
 
 // If mastercomfig is installed, it will override this alias
-alias version_comfig alias reload_dashboarddimmer "wait 5; showconsole; wait; incrementvar mat_antialias -100 100 1; hideconsole; wait 5; incrementvar mat_antialias -100 100 -1"
+alias version_comfig alias reload_dashboarddimmer reload_dashboarddimmer_nocomfig
 
 // User can call "keep_dimmer" from autoexec to prevent the DashboardDimmer reload
 alias prevent_reload alias prevent_reload? alias reload_dashboarddimmer
